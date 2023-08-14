@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { InputSwitch } from 'primereact/inputswitch';
 import { Toast } from 'primereact/toast'
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 // import i18n from '../i18n';
 
 const IndexPage = () => {
@@ -14,7 +14,7 @@ const IndexPage = () => {
     const [currIdx, setCurrIdx] = useState()
     const [selectedData, setSelectedData] = useState(null)
     const toast = useRef(null);
-    // const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const onRowSelect = (event) => {
         console.log(event, '<<<event')

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom'
 import AppWrapper from './AppWrapper';
 //import reportWebVitals from './reportWebVitals';
+import './i18n';
 
 ReactDOM.render(
     <HashRouter>
