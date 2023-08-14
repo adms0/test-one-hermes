@@ -166,11 +166,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{('Marketing')} <span className="float-right"><i className="fas fa-bullhorn"></i></span></h5>
+                                            <h5 className="card-title">{t('marketing')} <span className="float-right"><i className="fas fa-bullhorn"></i></span></h5>
                                             <p className="card-text">
-                                               {(` Peaceful; vibrant paradigm, collaborative cities. Shared vocabulary agile,
-                                                replicable, effective altruism youth. Mobilize commitment to overcome
-                                                injustice resilient, uplift social transparent effective.`)}
+                                               {t(`marketing_description`)}
                                             </p>
                                         </div>
                                     </div>
@@ -178,11 +176,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{('Manage')} <span className="float-right"><i className="fa fa-tasks"></i></span></h5>
+                                            <h5 className="card-title">{t('manage')} <span className="float-right"><i className="fa fa-tasks"></i></span></h5>
                                             <p className="card-text">
-                                               {(` Change-makers innovation or shared unit of analysis. Overcome injustice
-                                                outcomes strategize vibrant boots on the ground sustainable. Optimism,
-                                                effective altruism invest optimism corporate social.`)}
+                                               {t(`manage_description`)}
                                             </p>
                                         </div>
                                     </div>
@@ -190,12 +186,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{('Evolve')} <span className="float-right"><i className="fas fa-chart-line icon"></i></span></h5>
+                                            <h5 className="card-title">{t('evolve')} <span className="float-right"><i className="fas fa-chart-line icon"></i></span></h5>
                                             <p className="card-text">
-                                              {(`Activate catalyze and impact contextualize humanitarian. Unit of analysis
-                                                overcome injustice storytelling altruism. Thought leadership mass
-                                                incarceration. Outcomes big data, fairness, social game-changer.
-`)}
+                                              {t(`evolve_description`)}
                                             </p>
                                         </div>
                                     </div>
