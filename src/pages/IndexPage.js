@@ -14,17 +14,18 @@ const IndexPage = () => {
     const [currIdx, setCurrIdx] = useState()
     const [selectedData, setSelectedData] = useState(null)
     const toast = useRef(null);
-    const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation('consult');
+    console.log(t, '>>>t')
 
     const onRowSelect = (event) => {
         console.log(event, '<<<event')
+        toast.current.show({ severity: 'info', summary: 'Language Selected', detail: `Language: ${event.data.original_language}`, life: 3000 });
         i18n.changeLanguage(event?.data?.original_language);
-        toast.current.show({ severity: 'info', summary: 'Language Selected', detail: `Name: ${event.data.original_language}`, life: 3000 });
 
     };
 
     const onRowUnselect = (event) => {
-        toast.current.show({ severity: 'warn', summary: 'Language Unselected', detail: `Name: ${event.data.original_language}`, life: 3000 });
+        toast.current.show({ severity: 'warn', summary: 'Language Unselected', detail: `Language: ${event.data.original_language}`, life: 3000 });
     };
     // Fetch API 
     const url = 'https://api.themoviedb.org/3/movie/popular?api_key=dab17e357c37981ecaf73f404d80118c&language=en-US&page=1'
@@ -135,11 +136,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{t('Consult')} <span className="float-right"><i className="fas fa-comments"></i></span></h5>
+                                            <h5 className="card-title">{t('consult')} <span className="float-right"><i className="fas fa-comments"></i></span></h5>
                                             <p className="card-text">
-                                               {(`Co-create, design thinking; strengthen infrastructure resist granular.
-                                                Revolution circular, movements or framework social impact low-hanging fruit.
-                                                Save the world compelling revolutionary progress.`)}
+                                               {t(`description`)}
                                             </p>
                                         </div>
                                     </div>
@@ -147,7 +146,7 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{t('Design')} <span className="float-right"><i className="fas fa-paint-brush"></i></span></h5>
+                                            <h5 className="card-title">{('Design')} <span className="float-right"><i className="fas fa-paint-brush"></i></span></h5>
                                             <p className="card-text">
                                               {(`Policymaker collaborates collective impact humanitarian shared value
                                                 vocabulary inspire issue outcomes agile. Overcome injustice deep dive agile
