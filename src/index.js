@@ -1,5 +1,5 @@
 import 'react-app-polyfill/ie11';
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom'
 import AppWrapper from './AppWrapper';
@@ -7,9 +7,11 @@ import AppWrapper from './AppWrapper';
 import './i18n';
 
 ReactDOM.render(
+    <Suspense fallback={"loading"}>
     <HashRouter>
         <AppWrapper />
-    </HashRouter>,
+    </HashRouter>
+    </Suspense>,
     document.getElementById('root')
 );
 

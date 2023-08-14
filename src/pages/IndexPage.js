@@ -7,7 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { InputSwitch } from 'primereact/inputswitch';
 import { Toast } from 'primereact/toast'
 import { useTranslation } from 'react-i18next';
-// import i18n from '../i18n';
+import i18n from '../i18n';
 
 const IndexPage = () => {
     const [stateData, setStateData] = useState([])
@@ -18,8 +18,7 @@ const IndexPage = () => {
 
     const onRowSelect = (event) => {
         console.log(event, '<<<event')
-        // i18n.changeLanguage(event?.data?.original_language);
-
+        i18n.changeLanguage(event?.data?.original_language);
         toast.current.show({ severity: 'info', summary: 'Language Selected', detail: `Name: ${event.data.original_language}`, life: 3000 });
 
     };
@@ -85,7 +84,7 @@ const IndexPage = () => {
                     <div className="col-12 xl:col-12">
                         <div className="card">
                             <div className="card-header">
-                                <h4>{t('Popular Movie')}</h4>
+                                <h4>{('Popular Movie')}</h4>
                             </div>
                             <Toast ref={toast} />
 
@@ -138,7 +137,7 @@ const IndexPage = () => {
                                         <div className="card-body">
                                             <h5 className="card-title">{t('Consult')} <span className="float-right"><i className="fas fa-comments"></i></span></h5>
                                             <p className="card-text">
-                                               {t(`Co-create, design thinking; strengthen infrastructure resist granular.
+                                               {(`Co-create, design thinking; strengthen infrastructure resist granular.
                                                 Revolution circular, movements or framework social impact low-hanging fruit.
                                                 Save the world compelling revolutionary progress.`)}
                                             </p>
@@ -150,7 +149,7 @@ const IndexPage = () => {
                                         <div className="card-body">
                                             <h5 className="card-title">{t('Design')} <span className="float-right"><i className="fas fa-paint-brush"></i></span></h5>
                                             <p className="card-text">
-                                              {t(`Policymaker collaborates collective impact humanitarian shared value
+                                              {(`Policymaker collaborates collective impact humanitarian shared value
                                                 vocabulary inspire issue outcomes agile. Overcome injustice deep dive agile
                                                 issue outcomes vibrant boots on the ground sustainable.`)}
                                             </p>
@@ -160,9 +159,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{t('Develop')} <span className="float-right"><i className="fas fa-cubes"></i></span></h5>
+                                            <h5 className="card-title">{('Develop')} <span className="float-right"><i className="fas fa-cubes"></i></span></h5>
                                             <p className="card-text">
-                                                {t(`Revolutionary circular, movements a or impact framework social impact low-
+                                                {(`Revolutionary circular, movements a or impact framework social impact low-
                                                 hanging. Save the compelling revolutionary inspire progress. Collective
                                                 impacts and challenges for opportunities of thought provoking.`)}
                                             </p>
@@ -172,9 +171,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{t('Marketing')} <span className="float-right"><i className="fas fa-bullhorn"></i></span></h5>
+                                            <h5 className="card-title">{('Marketing')} <span className="float-right"><i className="fas fa-bullhorn"></i></span></h5>
                                             <p className="card-text">
-                                               {t(` Peaceful; vibrant paradigm, collaborative cities. Shared vocabulary agile,
+                                               {(` Peaceful; vibrant paradigm, collaborative cities. Shared vocabulary agile,
                                                 replicable, effective altruism youth. Mobilize commitment to overcome
                                                 injustice resilient, uplift social transparent effective.`)}
                                             </p>
@@ -184,9 +183,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{t('Manage')} <span className="float-right"><i className="fa fa-tasks"></i></span></h5>
+                                            <h5 className="card-title">{('Manage')} <span className="float-right"><i className="fa fa-tasks"></i></span></h5>
                                             <p className="card-text">
-                                               {t(` Change-makers innovation or shared unit of analysis. Overcome injustice
+                                               {(` Change-makers innovation or shared unit of analysis. Overcome injustice
                                                 outcomes strategize vibrant boots on the ground sustainable. Optimism,
                                                 effective altruism invest optimism corporate social.`)}
                                             </p>
@@ -196,9 +195,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{t('Evolve')} <span className="float-right"><i className="fas fa-chart-line icon"></i></span></h5>
+                                            <h5 className="card-title">{('Evolve')} <span className="float-right"><i className="fas fa-chart-line icon"></i></span></h5>
                                             <p className="card-text">
-                                              {t(`Activate catalyze and impact contextualize humanitarian. Unit of analysis
+                                              {(`Activate catalyze and impact contextualize humanitarian. Unit of analysis
                                                 overcome injustice storytelling altruism. Thought leadership mass
                                                 incarceration. Outcomes big data, fairness, social game-changer.
 `)}
