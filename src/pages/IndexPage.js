@@ -146,11 +146,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{('Design')} <span className="float-right"><i className="fas fa-paint-brush"></i></span></h5>
+                                            <h5 className="card-title">{t('design')} <span className="float-right"><i className="fas fa-paint-brush"></i></span></h5>
                                             <p className="card-text">
-                                              {(`Policymaker collaborates collective impact humanitarian shared value
-                                                vocabulary inspire issue outcomes agile. Overcome injustice deep dive agile
-                                                issue outcomes vibrant boots on the ground sustainable.`)}
+                                              {t(`design_description`)}
                                             </p>
                                         </div>
                                     </div>
@@ -158,11 +156,9 @@ const IndexPage = () => {
                                 <div className="col-4 column">
                                     <div className="card bg-power">
                                         <div className="card-body">
-                                            <h5 className="card-title">{('Develop')} <span className="float-right"><i className="fas fa-cubes"></i></span></h5>
+                                            <h5 className="card-title">{t('develop')} <span className="float-right"><i className="fas fa-cubes"></i></span></h5>
                                             <p className="card-text">
-                                                {(`Revolutionary circular, movements a or impact framework social impact low-
-                                                hanging. Save the compelling revolutionary inspire progress. Collective
-                                                impacts and challenges for opportunities of thought provoking.`)}
+                                                {t(`develop_description`)}
                                             </p>
                                         </div>
                                     </div>
