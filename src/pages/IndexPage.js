@@ -15,10 +15,8 @@ const IndexPage = () => {
     const [selectedData, setSelectedData] = useState(null)
     const toast = useRef(null);
     const { t, i18n } = useTranslation('consult');
-    console.log(t, '>>>t')
 
     const onRowSelect = (event) => {
-        console.log(event, '<<<event')
         toast.current.show({ severity: 'info', summary: 'Language Selected', detail: `Language: ${event.data.original_language}`, life: 3000 });
         i18n.changeLanguage(event?.data?.original_language);
 
@@ -26,6 +24,7 @@ const IndexPage = () => {
 
     const onRowUnselect = (event) => {
         toast.current.show({ severity: 'warn', summary: 'Language Unselected', detail: `Language: ${event.data.original_language}`, life: 3000 });
+        i18n.changeLanguage('en')
     };
     // Fetch API 
     const url = 'https://api.themoviedb.org/3/movie/popular?api_key=dab17e357c37981ecaf73f404d80118c&language=en-US&page=1'
